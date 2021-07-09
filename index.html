@@ -23,6 +23,10 @@
                 <a-asset-item
                     id="animated-assetA"
                     src="assetsA/asset.gltf"
+                ></a-asset-item>
+            </a-assets>
+            <a-assets>
+                <a-asset-item
                     id="animated-assetB"
                     src="assetsB/asset.glb"
                 ></a-asset-item>
@@ -37,33 +41,40 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA"
+                      
 
-                id="animated-markerB"
-                type="pattern"
-                preset="custom"
-                url="assetsB/marker.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerB"
-            >
-                <a-entity
-                    id="bowser-modelA"
-                    scale="0.0023738555970194667 0.0023738555970194667 0.0023738555970194667"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#animated-assetA"
-                    class="clickable"
-                    gesture-handler
-
-                    id="bowser-modelB"
-                    scale="11.97951980160453 11.97951980160453 11.97951980160453"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#animated-assetB"
-                    class="clickable"
-                    gesture-handler
-                ></a-entity>
+                       ><a-entity
+                                id="bowser-modelA"
+                                scale="0.0023738555970194667 0.0023738555970194667 0.0023738555970194667"
+                                animation-mixer="loop: repeat"
+                                gltf-model="#animated-assetA"
+                                class="clickable"
+                                gesture-handler
+                        >
+                            
+                      </a-entity>
+                      
             </a-marker>
 
+            <a-marker
+                            id="animated-markerB"
+                            type="pattern"
+                            preset="custom"
+                            url="assetsB/marker.patt"
+                            raycaster="objects: .clickable"
+                            emitevents="true"
+                            cursor="fuse: false; rayOrigin: mouse;"
+                            id="markerB"
+
+                        ><a-entity>
+                            id="bowser-modelB"
+                            scale="11.97951980160453 11.97951980160453 11.97951980160453"
+                            animation-mixer="loop: repeat"
+                            gltf-model="#animated-assetB"
+                            class="clickable"
+                            gesture-handler
+                  ></a-entity>
+                </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
     </body>
